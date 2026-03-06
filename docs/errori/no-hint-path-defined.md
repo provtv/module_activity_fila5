@@ -478,11 +478,11 @@ docker-compose restart app
 
 ### Sistema Architecture
 - [Service Provider Architecture](../../xot/docs/service-provider-architecture.md) - Architettura completa del sistema ServiceProvider
-- [Laraxot Conventions](../../../docs/laraxot-conventions.md) - Convenzioni generali
+- [Laraxot Conventions](../../../../docs/laraxot-conventions.md) - Convenzioni generali
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025
+**
 **Versione Laravel**: 12.35.1
 **Errore Code**: `InvalidArgumentException`
 **Severità**: Alta (blocca funzionalità Activity Log)
