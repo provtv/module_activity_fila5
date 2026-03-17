@@ -1,46 +1,45 @@
 # Activity Module - Testing Guidelines
 
-## Pre-requisiti (CRITICO)
-
-**Prima di eseguire i test**, migrare il DB di test:
-
-```bash
-php artisan migrate --env=testing --force
-```
-
-**phpunit.xml**: `ACTIVITY_LOGGER_DB_CONNECTION=mysql` per usare la connessione default (activity_log migrata su mysql). Nessun hack nel modello: la connessione viene risolta solo via config `activitylog.database_connection`.
-
-La tabella `activity_log` deve avere `subject_id` e `causer_id` come `string(36)` per supportare User UUID. Vedi [subject-id-causer-id-uuid-migration-fix](./errori/subject-id-causer-id-uuid-migration-fix.md).
-
 ## Testing Framework Requirements
 
 ### Environment Configuration
-All tests MUST use `.env.testing` configuration con MySQL (no SQLite), copia carbone del `.env` con suffisso `_test`:
+All tests MUST use `.env.testing` configuration:
 ```env
 APP_ENV=testing
+<<<<<<< .merge_file_u0UIz0
+<<<<<<< HEAD
 DB_CONNECTION=mysql
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+DB_CONNECTION=sqlite
+>>>>>>> e3956292 (.)
 DB_DATABASE=<nome progetto>_data_test
+DB_DATABASE=<nome progetto>_data_test
+<<<<<<< HEAD
 DB_DATABASE_USER=<nome progetto>_user_test
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
 =======
 DB_DATABASE=laravelpizza_data_test
 DB_DATABASE_USER=laravelpizza_user_test
 >>>>>>> a038b0f2 (.)
 =======
+=======
+DB_CONNECTION=sqlite
+>>>>>>> .merge_file_Ia7BDy
 DB_DATABASE=<nome progetto>_data_test
+DB_DATABASE=<nome progetto>_data_test
+<<<<<<< .merge_file_u0UIz0
 DB_DATABASE_USER=<nome progetto>_user_test
 >>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
 =======
-DB_DATABASE=laravelpizza_data_test
-DB_DATABASE_USER=laravelpizza_user_test
->>>>>>> a038b0f2 (.)
+>>>>>>> e3956292 (.)
 =======
-DB_DATABASE=<nome progetto>_data_test
-DB_DATABASE_USER=<nome progetto>_user_test
->>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+>>>>>>> .merge_file_Ia7BDy
 ```
 
 ### Pest Framework Usage

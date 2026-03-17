@@ -209,7 +209,7 @@ use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Modules\Activity\Models\Activity;
 
-class SchedeEmailStatsWidget extends BaseWidget
+class SchedaEmailStatsWidget extends BaseWidget
 {
     protected function getStats(): array
     {
@@ -363,7 +363,7 @@ public function it_logs_activity_when_sending_email(): void
 
 ---
 
-**
+**Ultimo Aggiornamento:** 2025-01-22
 **Versione:** 1.0
 **Autore:** System Integration Documentation
 **Stato:** ✅ Production Ready
